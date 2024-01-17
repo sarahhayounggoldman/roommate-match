@@ -1,5 +1,5 @@
 # about
-starrez is so goated, there's litterally nothing to change its perfect as it is
+star rez is hard to use so we are remaking it
 
 # why
 i love looking at starrez, it makes me feel warm and happy
