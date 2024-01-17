@@ -1,5 +1,5 @@
-#about
-starrez sucks, so we r trying to make finding roomates more fun
+# about
+starrez is so goated, there's litterally nothing to change its perfect as it is
 
-#why
-i hate looking at starrez, it makes me feel icky and unhappy
+# why
+i love looking at starrez, it makes me feel warm and happy
