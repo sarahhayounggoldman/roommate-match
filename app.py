@@ -40,8 +40,8 @@ def quiz():
             from roommate
             """
         )
-        users = curs.fetchall()
-        print(type(users))
+        allUsers = curs.fetchall() #this is of type list
+        
         return render_template('quiz.html',page_title='form')
     return print("shouldnt get here")
 

@@ -54,7 +54,8 @@ def compareTwo(p1, p2):
 
     return score/9
 
-# compares one person to entire db of people
+# compares one person to entire db of people, stored in list form
+
 
 if __name__ == '__main__':
     p1 = {'username': 'Wendy', 'descrip': 'Whoever I room with has to be okay with my pet hamster </3', 'contact': '5555555555', 'classyear': '2026', 'bedtime': 10, 'waketime': 8, 'cleanliness': 3, 'activity': 3, 'dorm': 'east'}
