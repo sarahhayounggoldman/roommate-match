@@ -20,7 +20,7 @@ app.config['TRAP_BAD_REQUEST_ERRORS'] = True
 
 @app.route('/')
 def index():
-    return render_template('index.html',page_title='test')
+    return render_template('list-all.html',users = users,page_title='test')
 
 @app.route('/quiz/', methods=['GET','POST'])
 def quiz():
@@ -32,6 +32,20 @@ def quiz():
         return render_template('quiz.html',page_title='form')
     return print("shouldnt get here")
 
+@app.route('/all-users/')
+def list_all():
+    conn = dbi.connect()
+    curs = dbi.dict_cursor(conn)
+    
+    # Select * here as all columns are needed for rendering
+    curs.execute(
+        """
+        select username, descrip, contact, classyear, bedtime, waketime, cleanliness, activity, dorm
+        from roommate
+        """
+    )
+    users = curs.fetchall()
+    return render_template('list-all.html', users = users, page_title='List All')
 
 if __name__ == '__main__':
     import sys, os
