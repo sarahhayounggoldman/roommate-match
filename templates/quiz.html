@@ -14,52 +14,66 @@
 <main>
    <form action = "{{url_for('quiz')}}" method = "post">
 
-<p>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="year">Class Year:</label><br>
+    <input type="text" id="year" name="year"><br>
+
+    <label for="email">Wellesley Email:</label><br>
+    <input type="text" id="email" name="email"><br>
+
+<p id="q1">
     1. Where do you want to live? <br>
+    <span>
         <input type="radio" name = "dorm" id="1.1">The Quint</input>
         <input type="radio" name = "dorm" id="1.2">Tower Court Complex</input>
         <input type="radio" name = "dorm" id="1.3">East Side</input>
-    </input>
+    </span>
 </p>
 
-<p>
-    2. When do you usually go to bed on weekdays? <br>
+<p id="q2">
+    2. When do you usually go to bed on weekdays? <br>   
+    <span>
         <input type="radio" name="bedtime" id="2.1">10 PM (or earlier)</input>
         <input type="radio" name="bedtime" id="2.2">11 PM</input>
         <input type="radio" name="bedtime" id="2.3">12 AM</input>
         <input type="radio" name="bedtime" id="2.4">1 AM</input>
         <input type="radio" name="bedtime" id="2.5">2 AM (or later)</input>
-    </select>
+    </span>
 </p>
 
-<p>
+<p id="q3">
     3. When do you usually wake up on weekdays? <br>
+    <span>
         <input type="radio" name="wakeup" id="3.1">7 AM (or earlier)</input>
         <input type="radio" name="wakeup" id="3.2">8 AM</input>
         <input type="radio" name="wakeup" id="3.3">9 AM</input>
         <input type="radio" name="wakeup" id="3.4">10 AM</input>
         <input type="radio" name="wakeup" id="3.5">11 AM (or later)</input>
-    </select>
+    </span>
 </p>
 
-<p>
+<p id="q4">
     4. On a scale from 1 to 5, how clean do you prefer to keep your room? <br>
+    <span>
         <input type="radio" name="clean" id="4.1">1 (pretty messy)</input>
         <input type="radio" name="clean" id="4.2">2</input>
         <input type="radio" name="clean" id="4.3">3</input>
         <input type="radio" name="clean" id="4.4">4</input>
         <input type="radio" name="clean" id="4.5">5 (super clean)</input>
-    </select>
+    </span>
 </p>
 
-<p>
+<p id="q5">
     5. On a scale from 1 to 5, how often do you plan on inviting friends to your dorm? <br>
+    <span>
         <input type="radio" name="social" id="5.1">1 (almost never)</input>
         <input type="radio" name="social" id="5.2">2</input>
         <input type="radio" name="social" id="5.3">3</input>
         <input type="radio" name="social" id="5.4">4</input>
         <input type="radio" name="social" id="5.5">5 (almost every day)</input>
-    </select>
+    </span>
 </p>
 
     <button>Find my future roommate!</button>
