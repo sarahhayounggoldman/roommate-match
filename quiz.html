@@ -13,17 +13,69 @@
  
 <main>
    <h1>Roommate Quiz</h1>
-   <div class="container"></div>
-       <div class="row"></div>
+
+   <form action = "{{url_for('quiz')}}" method = "post">
+
+    1. Where do you want to live? <br>
+    <label for="dorm"></label>
+    <select id = "dorm" name="q1" style="width: 100px;" required> 
+        <!-- <option value=""></option> -->
+        <option value="1">The Quint</option>
+        <option value="2">Tower Court Complex</option>
+        <option value="3">East Side</option>
+    </select>
+
+    2. When do you usually go to bed on weekdays? <br>
+    <label for="sleep-time"></label>
+    <select id = "sleep-time" name="q2" style="width: 100px;" required> 
+        <!-- <option value=""></option> -->
+        <option value="1">10 PM (or earlier)</option>
+        <option value="2">11 PM</option>
+        <option value="3">12 AM</option>
+        <option value="4">1 AM</option>
+        <option value="5">2 AM (or later)</option>
+    </select>
+
+    3. When do you usually wake up on weekdays? <br>
+    <label for="wake-time"></label>
+    <select id = "wake-time" name="q3" style="width: 100px;" required> 
+        <!-- <option value=""></option> -->
+        <option value="1">7 AM (or earlier)</option>
+        <option value="2">8 AM</option>
+        <option value="3">9 AM</option>
+        <option value="4">10 AM</option>
+        <option value="5">11 AM (or later)</option>
+    </select>
+
+    4. On a scale from 1 to 5, how clean do you prefer to keep your room? <br>
+    <label for="clean-or-messy"></label>
+    <select id = "wake-time" name="q4" style="width: 100px;" required> 
+        <!-- <option value=""></option> -->
+        <option value="1">1 (pretty messy)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (super clean)</option>
+    </select>
+
+    5. On a scale from 1 to 5, how often do you plan on inviting friends to your dorm? <br>
+    <label for="social"></label>
+    <select id = "social" name="q5" style="width: 100px;" required> 
+        <!-- <option value=""></option> -->
+        <option value="1">1 (almost never)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (almost every day)</option>
+    </select>
+
+   </form>
  
 </main>
  
 <!-- JavaScript at the bottom -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cs.wellesley.edu/~anderson/js/bounds/bounds-plugin.js"></script>
-<script src="room-questions.js" ></script>
-<script src="Question.js" ></script>
-<script src="quiz.js" ></script>
  
  
 </body>
