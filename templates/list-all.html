@@ -23,15 +23,15 @@
      <ul>
      {% for user in users %}
         <li>
-            <strong>{{ user.username }}</strong><br>
-            Class Year: {{ user.classyear }}</a><br>
-            Description: {{ user.description }} <br>
-            Contact: {{ user.contact }} <br>
-            Dorm: {{ user.dorm }} <br>
-            Bed Time: {{ user.bedtime }}<br>
-            Wake Time: {{ user.waketime }}<br>
-            Cleanliness: {{ user.cleanliness }}<br>
-            Activity Level: {{ user.activity }} <br>
+            <strong>{{ user.username }}</strong>
+            <p>Class Year: {{ user.classyear }}</p>
+            <p>Description: {{ user.descrip }} </p>
+            <p>Contact: {{ user.contact }} </p>
+            <p>Dorm: {{ user.dorm }} </p>
+            <p>Bed Time: {{ user.bedtime }}</p>
+            <p>Wake Time: {{ user.waketime }}</p>
+            <p>Cleanliness: {{ user.cleanliness }}</p>
+            <p>Activity Level: {{ user.activity }}</p>
             
         </li>
         {% endfor %}
