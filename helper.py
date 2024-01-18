@@ -17,44 +17,57 @@ def compareTwo(p1, p2):
         pass
     
     #compare bed time
-    if (p1.get('bedtime')==p2.get('bedtime')):
+    if (int(p1.get('bedtime'))==p2.get('bedtime')):
         score += 2
-    elif (abs(p1.get('bedtime') - p2.get('bedtime')) <= 2):
+    elif (abs(int(p1.get('bedtime')) - p2.get('bedtime')) <= 2):
         score += 1 #a decent match, if not perfect
     else:
         #score doesn't change
         pass
 
     #compare wake time
-    if (p1.get('waketime')==p2.get('waketime')):
+    if (int(p1.get('wakeup'))==p2.get('waketime')):
         score += 2
-    elif (abs(p1.get('waketime') - p2.get('waketime')) <= 2):
+    elif (abs(int(p1.get('wakeup')) - p2.get('waketime')) <= 2):
         score += 1 #a decent match, if not perfect
     else:
         #score doesn't change
         pass
 
     #compare cleanliness
-    if (p1.get('cleanliness')==p2.get('cleanliness')):
+    if (int(p1.get('clean'))==p2.get('cleanliness')):
         score += 2
-    elif (abs(p1.get('cleanliness') - p2.get('cleanliness')) <= 2):
+    elif (abs(int(p1.get('clean')) - p2.get('cleanliness')) <= 2):
         score += 1 #a decent match, if not perfect
     else:
         #score doesn't change
         pass
 
     #compare activity
-    if (p1.get('activity')==p2.get('activity')):
+    if (int(p1.get('social'))==p2.get('activity')):
         score += 2
-    elif (abs(p1.get('activity') - p2.get('activity')) <= 2):
+    elif (abs(int(p1.get('social')) - p2.get('activity')) <= 2):
         score += 1 #a decent match, if not perfect
     else:
         #score doesn't change
         pass
 
+    # return score as a percentage
     return score/9
 
 # compares one person to entire db of people, stored in list form
+# takes in one person's data (in dictionary form) and a list of everyone else (in list form)
+# returns a dict of the best match found out of everyone in the list, as well as their score
+# AT THE MOMENT: Doesn't handle ties, just happens to return one person who is best match
+def compareAll(p1, all):
+    bestScore = 0
+    for p2 in all:
+        currScore = compareTwo(p1,p2)
+        if currScore >= bestScore:
+            bestScore = currScore
+            bestMatch = p2 # set the best match to the information of the person with the best match
+
+    return bestScore, bestMatch
 
 
 if __name__ == '__main__':

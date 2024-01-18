@@ -9,7 +9,7 @@ app = Flask(__name__)
 import cs304dbi as dbi
 # import cs304dbi_sqlite3 as dbi
 
-import secrets
+import secrets, helper
 
 app.secret_key = 'your secret here'
 # replace that with a random key
@@ -42,8 +42,12 @@ def quiz():
         )
         allUsers = curs.fetchall() #this is of type list
         
-        return render_template('quiz.html',page_title='form')
+        bestScore, bestMatch = helper.compareAll(formData, allUsers)
+
+        #return a redirect to a template that lists the information of the person with the best match
+        return render_template('best-match.html', user = bestMatch, score = bestScore, page_title='Best Match')
     return print("shouldnt get here")
+
 
 @app.route('/all-users/')
 def list_all():
