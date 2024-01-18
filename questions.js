@@ -1,3 +1,10 @@
+var questiondorm = [
+    {Q: "Where do you want to live?", 
+    A: "The Quint", 
+    B: "Tower Court Complex",
+    C: "East Side",
+    }];
+
 var questions1to5 = [ 
     {Q: "When do you sleep?",
         A: "10 PM (or earlier)",
