@@ -13,8 +13,25 @@
   
   <!-- STYLING STUFF -->
   <style>
+    html, body {
+      height: 100%; /* Make sure the html and body cover the full height */
+      margin: 1%; /* Remove default margin */
+    }
+
+    body {
+      display: flex; /* Use flexbox to center contents */
+      flex-direction: column; /* Stack flex items vertically */
+      justify-content: center; /* Center vertically */
+      align-items: center; /* Center horizontally */
+    }
+
+    .container {
+      width: 100%; /* Full width */
+      max-width: none; /* Override Bootstrap's max-width for containers */
+    }
+
     .rounded-corners {
-      border-radius: 40px; /* adjust  pixel value as needed */
+      border-radius: 40px; /* Adjust pixel value as needed */
     }
   </style>
 </head>
@@ -37,48 +54,6 @@
   </div>
 </div>
 
-  
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Roommate Matching</title>
-  
-  <!-- META STUFF -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  
-  <!-- STYLING STUFF -->
-  <style>
-    .rounded-corners {
-      border-radius: 40px; /* adjust  pixel value as needed */
-    }
-  </style>
-</head>
-
-<body>
-<!-- Outgoing message section -->
-<div class="container" style="margin-bottom: 50px;">
-  <div class="row">
-    <div class="col-sm-4 rounded-corners" style="background-color:#E9E9EB; display: flex; align-items: center; justify-content: center; height: 50px;">
-      <h3 style="text-align: center;">let's find you a roommate!</h3>
-      </div>
-    </div>
-  </div>
-
-<!-- Incoming message section -->
-<div class="container" style="margin-bottom: 50px;">
-  <div class="row">
-    <div class="col-sm-4 col-sm-offset-8 rounded-corners" style="background-color:#007AFF; display: flex; align-items: center; justify-content: center; height: 50px;">
-      <h3 style="color: white; margin: 0;">yes please i beg i am crying</h3>
-    </div>
-  </div>
-</div>
-
-  
 <div class="container">
   <div class="row">
     <!-- Icon aligned vertically and horizontally center with increased size -->
@@ -87,20 +62,16 @@
     </div>
     
     <!-- "Let's start" section -->
-    <div class="col-sm-10 rounded-corners" style="background-color:white; border: 1px solid grey; display: flex; align-items-center; justify-content-center; height: 50px;">
+    <div class="col-sm-10 rounded-corners" style="background-color:white; border: 1px solid grey; display: flex; align-items:center; justify-content: center; height: 50px;">
       <a href="LINK TO FIRST PAGE OF QUIZ/INFORMATION"><h3 style="color: black; text-align: center; font-weight: bold;">let's start!</h3></a>
     </div>
 
     <!-- Icon aligned vertically and horizontally center with increased size -->
-    <div class="col-sm-1 d-flex align-items-center justify-content-center" style="height: 50px;">
+    <div class="col-sm-1 d-flex align-items: center justify-content: center" style="height: 50px;">
       <i class="bi bi-emoji-smile" style="font-size: 3rem;"></i> <!-- Adjust font-size as needed -->
     </div>
   </div>
 </div>
-
-</body>
-</html>
-
 
 </body>
 </html>
