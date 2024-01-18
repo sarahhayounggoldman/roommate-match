@@ -23,6 +23,12 @@ html {
 body {
     display: table-cell;
     vertical-align: middle;
+    padding:100px;
+}
+
+input {
+    margin-left: 50px;
+    margin-bottom: 50px;
 }
 
 
