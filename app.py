@@ -9,7 +9,7 @@ app = Flask(__name__)
 import cs304dbi as dbi
 # import cs304dbi_sqlite3 as dbi
 
-import secrets
+import secrets, helper
 
 app.secret_key = 'your secret here'
 # replace that with a random key
@@ -29,8 +29,25 @@ def quiz():
         return render_template('quiz.html',page_title='form')
     # if post, then they submitted form data, and we want to enter that
     elif request.method == "POST":
-        return render_template('quiz.html',page_title='form')
+        formData = request.form #get current form data
+        #compare form data to all data in current db
+        conn = dbi.connect()
+        curs = dbi.dict_cursor(conn)
+
+        curs.execute(
+            """
+            select username, descrip, contact, classyear, bedtime, waketime, cleanliness, activity, dorm
+            from roommate
+            """
+        )
+        allUsers = curs.fetchall() #this is of type list
+        
+        bestScore, bestMatch = helper.compareAll(formData, allUsers)
+
+        #return a redirect to a template that lists the information of the person with the best match
+        return render_template('best-match.html', user = bestMatch, score = bestScore, page_title='Best Match')
     return print("shouldnt get here")
+
 
 @app.route('/all-users/')
 def list_all():
@@ -55,9 +72,10 @@ if __name__ == '__main__':
         assert(port>1024)
     else:
         port = os.getuid()
-    # set this local variable to 'wmdb' or your personal or team db
+    # # set this local variable to 'wmdb' or your personal or team db
     db_to_use = 'je100_db' 
     print('will connect to {}'.format(db_to_use))
     dbi.conf(db_to_use)
     app.debug = True
     app.run('0.0.0.0',port)
+    
