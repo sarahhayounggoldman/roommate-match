@@ -9,6 +9,29 @@ HTML {
     font-family: var(--font-family)
 }
 
+
+
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    padding:100px;
+}
+
+input {
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+
 /* For flashed messages; make them stand out using red and italics */
 
 #messages {
