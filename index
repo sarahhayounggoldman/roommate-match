@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name=upskill content="upskill-project">
+    <meta name="description" content="This is a portfolio/resume website for Sarah Goldman">
+    <title>Upskill</title>
+</head>
+<body>
+
+   
+
+    
+
+</body>
+
+<footer id="copyright">
+    &copy; Upskill 2024. Made with HTML, CSS, JS, and ♡
+</footer>
+
+</html>
