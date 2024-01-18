@@ -13,7 +13,22 @@ function helperRadio(option, index, number) {
    return radio;
 }
  
-// creates and returns a section containing a question and 5 radio buttons
+// creates and returns a section containing a question and answers for the quint questions
+function helperQuestionDorms (questionObject, index) {
+    //building the elements
+    var section = $("<section>", {"class" : "text-answer",
+                                 "data-answer" : questionObject.ANS});
+    var question = $("<p>").attr("class", "question").text(questionObject.Q);
+    // building the tree
+    $(section).append(question)
+                     .append(helperRadio(questionObject.A, index, "1"))
+                     .append(helperRadio(questionObject.B, index, "2"))
+                     .append(helperRadio(questionObject.C, index, "3"))
+   // returning the tree
+   return section;
+}
+
+// creates and returns a section containing a question and answers for the questions w 5 options
 function helperQuestion1to5 (questionObject, index) {
    // building the elements
    var section = $("<section>", {"class" : "text-answer",
