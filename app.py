@@ -20,7 +20,7 @@ app.config['TRAP_BAD_REQUEST_ERRORS'] = True
 
 @app.route('/')
 def index():
-    return render_template('list-all.html',users = users,page_title='test')
+    return render_template('index.html',page_title='test')
 
 @app.route('/quiz/', methods=['GET','POST'])
 def quiz():
@@ -29,6 +29,19 @@ def quiz():
         return render_template('quiz.html',page_title='form')
     # if post, then they submitted form data, and we want to enter that
     elif request.method == "POST":
+        formData = request.form #get current form data
+        #compare form data to all data in current db
+        conn = dbi.connect()
+        curs = dbi.dict_cursor(conn)
+
+        curs.execute(
+            """
+            select username, descrip, contact, classyear, bedtime, waketime, cleanliness, activity, dorm
+            from roommate
+            """
+        )
+        users = curs.fetchall()
+        print(type(users))
         return render_template('quiz.html',page_title='form')
     return print("shouldnt get here")
 
@@ -55,9 +68,10 @@ if __name__ == '__main__':
         assert(port>1024)
     else:
         port = os.getuid()
-    # set this local variable to 'wmdb' or your personal or team db
+    # # set this local variable to 'wmdb' or your personal or team db
     db_to_use = 'je100_db' 
     print('will connect to {}'.format(db_to_use))
     dbi.conf(db_to_use)
     app.debug = True
     app.run('0.0.0.0',port)
+    
