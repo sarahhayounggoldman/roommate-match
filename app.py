@@ -20,7 +20,7 @@ app.config['TRAP_BAD_REQUEST_ERRORS'] = True
 
 @app.route('/')
 def index():
-    return render_template('list-all.html',users = users,page_title='test')
+    return render_template('index.html',page_title='test')
 
 @app.route('/quiz/', methods=['GET','POST'])
 def quiz():
