@@ -142,7 +142,7 @@
   <!-- Buttons with justify-content-between -->
 <div class="button-container pt-3">
   <a href="#q2">
-    <button class="btn btn-success">Next</button>
+    <button class="no-submit">Next</button>
   </a>
 </div>
 </div>
@@ -196,8 +196,8 @@
 
   <!-- Buttons with justify-content-between -->
   <div class="button-container pt-3">
-    <a href="#q1"><button class="btn btn-primary">Previous</button></a>
-    <a href="#q3"><button class="btn btn-success">Next</button></a>
+    <a href="#q1"><button class="no-submit">Previous</button></a>
+    <a href="#q3"><button class="no-submit">Next</button></a>
   </div>
 </div>
 
@@ -250,8 +250,8 @@
 
   <!-- Buttons with justify-content-between -->
   <div class="button-container pt-3">
-    <a href="#q2"><button class="btn btn-primary">Previous</button></a>
-    <a href="#q4"><button class="btn btn-success">Next</button></a>
+    <a href="#q2"><button class="no-submit">Previous</button></a>
+    <a href="#q4"><button class="no-submit">Next</button></a>
   </div>
 </div>
 
@@ -304,8 +304,8 @@
 
   <!-- Buttons with justify-content-between -->
   <div class="button-container pt-3">
-    <a href="#q3"><button class="btn btn-primary">Previous</button></a>
-    <a href="#q5"><button class="btn btn-success">Next</button></a>
+    <a href="#q3"><button class="no-submit">Previous</button></a>
+    <a href="#q5"><button class="no-submit">Next</button></a>
   </div>
 </div>
 
@@ -358,8 +358,8 @@
 
   <!-- Buttons with justify-content-between -->
   <div class="button-container pt-3">
-    <a href="#q4"><button class="btn btn-primary">Previous</button></a>
-    <a href="#submit-button"><button class="btn btn-success">Next</button></a>
+    <a href="#q4"><button class="no-submit">Previous</button></a>
+    <a href="#submit-button"><button class="no-submit">Next</button></a>
   </div>
 </div>
 
@@ -378,6 +378,16 @@
 <!-- JavaScript at the bottom -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cs.wellesley.edu/~anderson/js/bounds/bounds-plugin.js"></script>
+<script>
+  const form = document.querySelector("form");
+
+  // Prevent form submission on button click
+  document
+      .getElementByClassName("submit-btn")
+      .addEventListener("click", function (event) {
+          event.preventDefault();
+      });
+</script>
 
 </body>
 </html>
