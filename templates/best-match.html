@@ -19,10 +19,29 @@
            <div class="col-sm-1"></div>
            <div id="right" class="col-sm-5"></div>
      </div>
-
      
-    <h2>With a score of {{score}}%, your best roommate match is... </h2>
-    <strong>{{ user.username }}</strong>
+     <div class="container" style="margin-bottom: 50px;">
+        <div class="row">
+
+        <div class="col-sm-4 col-sm-offset-8 rounded-corners" style="background-color:#007AFF; display: flex; align-items: center; justify-content: center; height: 50px;">
+            <h2 style="color: white; margin: 0;">With a score of {{score}}%, your best roommate match is...</h2>
+        </div>
+
+        <strong>{{ user.username }}</strong>
+        <p>Class Year: {{ user.classyear }}</p>
+        <p>Description: {{ user.descrip }} </p>
+        <p>Contact: {{ user.contact }} </p>
+        <p>Dorm: {{ user.dorm }} </p>
+        <p>Bed Time: {{ user.bedtime }}</p>
+        <p>Wake Time: {{ user.waketime }}</p>
+        <p>Cleanliness: {{ user.cleanliness }}</p>
+        <p>Activity Level: {{ user.activity }}</p>
+
+        </div>
+      </div>
+
+    <!-- <h2>With a score of {{score}}%, your best roommate match is... </h2> -->
+    <!-- <strong>{{ user.username }}</strong>
     <p>Class Year: {{ user.classyear }}</p>
     <p>Description: {{ user.descrip }} </p>
     <p>Contact: {{ user.contact }} </p>
@@ -30,7 +49,7 @@
     <p>Bed Time: {{ user.bedtime }}</p>
     <p>Wake Time: {{ user.waketime }}</p>
     <p>Cleanliness: {{ user.cleanliness }}</p>
-    <p>Activity Level: {{ user.activity }}</p>
+    <p>Activity Level: {{ user.activity }}</p> -->
 
  
 </main>
