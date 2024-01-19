@@ -53,7 +53,7 @@ def compareTwo(p1, p2):
         pass
 
     # return score as a percentage
-    return score/9
+    return math.trunc(score/9 * 100)
 
 # compares one person to entire db of people, stored in list form
 # takes in one person's data (in dictionary form) and a list of everyone else (in list form)
