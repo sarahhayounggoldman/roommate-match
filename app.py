@@ -18,9 +18,37 @@ app.secret_key = secrets.token_hex()
 # This gets us better error messages for certain common request errors
 app.config['TRAP_BAD_REQUEST_ERRORS'] = True
 
-@app.route('/')
+@app.route('/', methods=['GET','POST'])
 def index():
-    return render_template('index.html',page_title='test')
+    conn = dbi.connect()
+    if request.method == "GET":
+        return render_template('index.html',page_title='form')
+    # if post, then they submitted form data, and we want to enter that
+    elif request.method == "POST":
+        
+        formData = request.form #get current form data
+        #compare form data to all data in current db
+        conn = dbi.connect()
+        curs = dbi.dict_cursor(conn)
+
+        curs.execute(
+            """
+            select username, descrip, contact, classyear, bedtime, waketime, cleanliness, activity, dorm
+            from roommate
+            """
+        )
+        allUsers = curs.fetchall() #this is of type list
+        
+        bestScore, bestMatch = helper.compareAll(formData, allUsers)
+
+        #return a redirect to a template that lists the information of the person with the best match
+        return render_template('best-match.html', user = bestMatch, score = bestScore, page_title='Best Match')
+    return print("shouldnt get here")
+
+
+# @app.route('/')
+# def index():
+#     return render_template('index.html',page_title='test')
 
 @app.route('/quiz/', methods=['GET','POST'])
 def quiz():
