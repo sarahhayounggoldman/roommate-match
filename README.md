@@ -15,6 +15,14 @@ Star rez exists, but it has a lot of problems. It is slow, often doesn't save yo
 # process
 We were heavily inspired by websites like [quotev](https://www.quotev.com/) that approach the questionnaire process with a fun, conversational tone. Based on the experience of our group members, we knew we wanted to experiment with different HTML and CSS features to create an engaging front end, and also make use of a database for data storage on the backend. Our initial design ideas were very ambitious, but we ultimately decided to narrow down the list of questions asked and create a simple scoring algorithm to pick one best match. We feel like we created a strong framework that could be expanded into larger app with more features in the future.
 
+## wireframe
+Initially, we made a simple wireframe of how we would like for our web app to look and act. Below is a runthrough of how we hoped for our webapp to work:
+
+
+https://github.com/sarahhayounggoldman/roommate-match/assets/139371832/8f7d27b8-deb2-441c-ace4-b8d79be24b3a
+
+Honestly, our project doesn't do too bad of an attempt at trying to recreate this!
+
 # authors
 Jen, Dechen, and Sarah
 
