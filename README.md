@@ -1,10 +1,10 @@
 # about
-This project is designed to help improve the roommmate selection process at Wellesley College. It allows you to fill out a questionnare about your rooming preferences, including:
+This project is designed to help improve the roommmate selection process at Wellesley College. It allows you to fill out a questionnaire about your rooming preferences, including:
 - Typical bed time
 - Typical wake up time
 - Cleanliness
-- Social activity in your room
-- Preferred dorm area
+- Frequency of guests in room
+- Preferred dorm
 
 Once you submit, it will search our database of users and compare your data with theirs, ultimately providing you with the best match according to our scoring algorithm.
 
