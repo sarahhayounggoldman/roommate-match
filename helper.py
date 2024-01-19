@@ -2,6 +2,7 @@ from flask import flash
 from datetime import date, datetime, timedelta
 
 import cs304dbi as dbi
+import math
 
 # a function to compare two people and return compatability score
 def compareTwo(p1, p2):
