@@ -24,7 +24,7 @@ https://github.com/sarahhayounggoldman/roommate-match/assets/139371832/8f7d27b8-
 Honestly, our project doesn't do too bad of an attempt at trying to recreate this!
 
 # next steps
-If we had more time, it would have been great to add more questions to improve our algorithm! We would also like to have added each new user's info added to the database, to make it a fully usable application. One last thing: design-wise, we'd like to make the appearance of our application look more like our wireframe.
+If we had more time, it would have been great to add more questions to improve our algorithm! We would also like to have added each new user's info added to the database, to make it a fully usable application. One last thing: design-wise, we'd like to make the appearance of our application look more like our wireframe on the front end.
 
 # authors
 Jen, Dechen, and Sarah
